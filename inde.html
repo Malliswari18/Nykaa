@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nykaa - Beauty Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+        <div class="sale-text">
+            Nykaa's Diwali Dhamaka Sale Is Now Live!
+        </div>
+        <div class="top-links">
+            <a href="#">▣ Get App</a>
+            <span>|</span>
+            <a href="#">♧ Store & Events</a>
+            <span>|</span>
+            <a href="#">▧ Gift Card</a>
+            <span>|</span>
+            <a href="#">ⓘ Help</a>
+        </div>
+    </div>
+
+
+    <!-- MAIN NAVIGATION -->
+    <header class="main-header">
+        <div class="logo">NYKAA</div>
+        <nav class="main-nav">
+            <a href="#">Categories</a>
+            <a href="#">Brands</a>
+            <a href="#">Luxe</a>
+            <a href="#">Nykaa Fashion</a>
+            <a href="#">Beauty Advice</a>
+        </nav>
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" placeholder="Search on Nykaa">
+        </div>
+        <button class="sign-in">Sign in</button>
+        <div class="bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+
+    <!-- CATEGORY NAVIGATION (TEXT LINKS) -->
+    <nav class="category-nav">
+        <a href="#">Makeup</a>
+        <a href="#">Skin</a>
+        <a href="#">Hair</a>
+        <a href="#">Appliances</a>
+        <a href="#">Bath & Body</a>
+        <a href="#">Natural</a>
+        <a href="#">Mom & Baby</a>
+        <a href="#">Health & Wellness</a>
+        <a href="#">Men</a>
+        <a href="#">Fragrance</a>
+        <a href="#">Fashion Selects</a>
+        <a href="#" class="sale">SALE</a>
+    </nav>
+
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <img src="./assets/imgs/banner.webp" alt="Nykaa Sale Banner">
+    </section>
+
+
+    <!-- OFFER SLIDER -->
+    <section class="offer-slider">
+        <!-- Left Arrow -->
+        <button class="arrow" onclick="document.getElementById('offer-scroll').scrollBy({left: -800, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <!-- Scrollable Container -->
+        <div class="slider-content" id="offer-scroll">
+            <!-- SLIDE 1 -->
+            <div class="slide">
+                Get up to ₹500 on orders over ₹3,000 with <strong>IDFC First Bank Debit Cards</strong>
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="slide">
+                <strong>GET FREE SHIPPING ON</strong> 1st Order above ₹149
+            </div>
+        </div>
+        
+        <!-- Right Arrow -->
+        <button class="arrow" onclick="document.getElementById('offer-scroll').scrollBy({left: 800, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </section>
+
+
+    <!-- CATEGORY CAROUSEL -->
+    <div class="category-carousel-wrapper">
+        
+        <!-- Left Arrow -->
+        <button class="cat-arrow" onclick="document.getElementById('cat-scroll').scrollBy({left: -400, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Scrollable Container -->
+        <section class="category-section" id="cat-scroll">
+            <div class="category-item">
+                <img src="./assets/imgs/Luxe.avif" alt="Luxe">
+                <p>Luxe</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Makeup.avif" alt="Makeup">
+                <p>Makeup</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Skin.avif" alt="Skin">
+                <p>Skin</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Hair.avif" alt="Hair">
+                <p>Hair</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Fragrances.avif" alt="Fragrances">
+                <p>Fragrances</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Bath&Body.avif" alt="Bath & Body">
+                <p>Bath & Body</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Wellness.avif" alt="Wellness">
+                <p>Wellness</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Gifting.avif" alt="Gifting">
+                <p>Gifting</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Appliances.avif" alt="Appliances">
+                <p>Appliances</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Korean-Beauty.avif" alt="Korean Beauty">
+                <p>Explore Now</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/New-at-Nykaa.avif" alt="New at Nykaa">
+                <p>Explore Now</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Mom-and-Baby.avif" alt="Mom & Baby">
+                <p>Mom & Baby</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Nykaa-Collection.avif" alt="Nykaa Collection">
+                <p>Explore Now</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Skin-Analyser.avif" alt="Nykaa SkinScan">
+                <p>Skin Analyser</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Grooming-Essentials.avif" alt="Grooming Essentials">
+                <p>Grooming Essentials</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Retail-Store.avif" alt="Retail Store">
+                <p>Explore Now</p>
+            </div>
+            <div class="category-item">
+                <img src="./assets/imgs/Fashion-Selects.avif" alt="Fashion Selects">
+                <p>Fashion Selects</p>
+            </div>
+        </section>
+
+        <!-- Right Arrow -->
+        <button class="cat-arrow right" onclick="document.getElementById('cat-scroll').scrollBy({left: 400, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+
+    <!-- LIMITED TIME DEALS -->
+    <section class="deals-section">
+        
+        <div class="deals-heading">
+            <h2>LIMITED TIME DEALS ⚡</h2>
+            <p>ENDS IN 07h 10m 28s</p>
+        </div>
+
+        <!-- CAROUSEL WRAPPER -->
+        <div class="deals-carousel-wrapper">
+            
+            <!-- Left Arrow -->
+            <button class="deal-arrow" onclick="document.getElementById('deals-scroll').scrollBy({left: -600, behavior: 'smooth'})">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <!-- Scrollable Container -->
+            <div class="deals-container" id="deals-scroll">
+                <div class="deal-card">
+                    <img src="./assets/imgs/deal1.webp" alt="Festive Makeup Deals">
+                </div>
+                <div class="deal-card">
+                    <img src="./assets/imgs/deal2.webp" alt="Trending Hair Care Deals">
+                </div>
+                <div class="deal-card">
+                    <img src="images/deal3.jpg" alt="Luxe Deals">
+                </div>
+                <div class="deal-card">
+                    <img src="images/deal4.jpg" alt="Skincare Deals">
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="deal-arrow right" onclick="document.getElementById('deals-scroll').scrollBy({left: 600, behavior: 'smooth'})">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            
+        </div>
+        
+    </section>
+
+    <!-- DAZZLING FESTIVE PICKS -->
+<section class="festive-section">
+    
+    <div class="festive-heading">
+        <h2>✨ DAZZLING FESTIVE PICKS ✨</h2>
+    </div>
+
+    <!-- CAROUSEL WRAPPER -->
+    <div class="festive-carousel-wrapper">
+        
+        <!-- Left Arrow -->
+        <button class="festive-arrow" onclick="document.getElementById('festive-scroll').scrollBy({left: -400, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Scrollable Container -->
+        <div class="festive-container" id="festive-scroll">
+            
+            <!-- Slide 1 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive1.avif" alt="Festive Pick 1">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive2.avif" alt="Festive Pick 2">
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive3.avif" alt="Festive Pick 3">
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive4.avif" alt="Festive Pick 4">
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive5.avif" alt="Festive Pick 5">
+            </div>
+            
+            <!-- Slide 6 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive6.avif" alt="Festive Pick 6">
+            </div>
+            
+            <!-- Slide 7 -->
+            <div class="festive-card">
+                <img src="./assets/imgs/festive7.avif" alt="Festive Pick 7">
+            </div>
+
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="festive-arrow right" onclick="document.getElementById('festive-scroll').scrollBy({left: 400, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        
+    </div>
+
+</section>
+
+
+
+<!-- NEW & WORTH IT SECTION -->
+<section class="new-worth-it">
+    
+    <div class="nwi-heading">
+        <h2>🔆 NEW & WORTH IT 🔆</h2>
+    </div>
+
+    <!-- MAIN VIDEO BANNER -->
+    <div class="nwi-video-banner">
+        <!-- Add your video path to the src below -->
+        <video src="./assets/imgs/advideo.mp4" autoplay loop muted playsinline poster="images/video-placeholder.jpg"></video>
+    </div>
+
+    <!-- CAROUSEL WRAPPER -->
+    <div class="nwi-carousel-wrapper">
+        
+        <!-- Left Arrow -->
+        <button class="nwi-arrow" onclick="document.getElementById('nwi-scroll').scrollBy({left: -400, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Scrollable Container -->
+        <div class="nwi-container" id="nwi-scroll">
+            
+            <div class="nwi-card">
+                <img src="./assets/imgs/nwi-1.avif" alt="Rich Velvety Matte">
+                <p>Rich Velvety Matte</p>
+            </div>
+            
+            <div class="nwi-card">
+                <img src="./assets/imgs/nwi-2.avif" alt="Limited edition all-in-one palette">
+                <p>Limited edition all-in-one palette</p>
+            </div>
+            
+            <div class="nwi-card">
+                <img src="./assets/imgs/nwi-3.avif" alt="Award Winning Lipstick">
+                <p>Award Winning Lipstick</p>
+            </div>
+            
+            <div class="nwi-card">
+                <img src="./assets/imgs/nwi-4.avif" alt="Festive Eyes Made Easy">
+                <p>Festive Eyes Made Easy</p>
+            </div>
+            
+            <div class="nwi-card">
+                <img src="./assets/imgs/nwi-5.avif" alt="Longstay Cushion Foundation">
+                <p>Longstay Cushion Foundation</p>
+            </div>
+
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="nwi-arrow right" onclick="document.getElementById('nwi-scroll').scrollBy({left: 400, behavior: 'smooth'})">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        
+    </div>
+
+</section>
+
+<!-- BIG BRANDS, IRRESISTIBLE PRICES SECTION -->
+<section class="big-brands-section">
+    
+   <!-- THIN BANNER SLOT -->
+<div class="banner-slot">
+    <img src="https://images-static.nykaa.com/uploads/a259d74c-864a-4c0e-9523-7d78610e29b5.jpg?tr=cm-pad_resize,w-1800" alt="Special Offer">
+</div>
+
+    <!-- GRID CONTAINER -->
+    <div class="brands-grid">
+        
+        <!-- Row 1 -->
+        <div class="brand-card">
+            <img src="images/brand1.jpg" alt="e.l.f.">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand2.jpg" alt="Huda Beauty">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand3.jpg" alt="Beauty of Joseon">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand4.jpg" alt="CeraVe">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand5.jpg" alt="Plum">
+        </div>
+
+        <!-- Row 2 -->
+        <div class="brand-card">
+            <img src="images/brand6.jpg" alt="Kay Beauty">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand7.jpg" alt="Minimalist">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand8.jpg" alt="Eucerin">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand9.jpg" alt="Charlotte Tilbury">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand10.jpg" alt="La Roche-Posay">
+        </div>
+
+        <!-- Row 3 (Centered 4 cards) -->
+        <div class="brand-card">
+            <img src="images/brand11.jpg" alt="Simple">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand12.jpg" alt="L'Oreal">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand13.jpg" alt="The Ordinary">
+        </div>
+        <div class="brand-card">
+            <img src="images/brand14.jpg" alt="Rare Beauty">
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

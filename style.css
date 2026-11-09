@@ -1,0 +1,806 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+/* TOP ANNOUNCEMENT BAR */
+.top-bar {
+    height: 55px;
+    background: linear-gradient(to right, #ff655e, #ff7947);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    color: white;
+}
+
+.sale-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.top-links span {
+    color: #5b2922;
+}
+
+/* MAIN HEADER */
+.main-header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    border-bottom: 1px solid #eee;
+    gap: 25px;
+}
+
+/* LOGO */
+.logo {
+    color: #ed0875;
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+    transform: skew(-10deg);
+}
+
+/* MAIN NAVIGATION */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #151525;
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    color: #ed0875;
+}
+
+/* SEARCH BOX */
+.search-box {
+    width: 335px;
+    height: 53px;
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 12px;
+}
+
+.search-box span {
+    font-size: 30px;
+    color: #777;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 17px;
+    width: 100%;
+}
+
+/* SIGN IN */
+.sign-in {
+    background-color: #ed0074;
+    color: white;
+    border: none;
+    padding: 16px 23px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 105px;
+}
+
+.sign-in:hover {
+    background-color: #c90062;
+}
+
+/* SHOPPING BAG */
+.bag {
+    font-size: 25px;
+    color: #111;
+    cursor: pointer;
+}
+
+/* CATEGORY NAVIGATION */
+.category-nav {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 3%;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #656575;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.category-nav a:hover {
+    color: #ed0074;
+}
+
+.category-nav .sale {
+    background-color: #ed0074;
+    color: white;
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 20px 5px 20px 5px;
+}
+
+/* HERO BANNER */
+.hero {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* OFFER SLIDER */
+.offer-slider {
+    width: 100%;
+    height: 125px;
+    border: 2px solid #ff4eab;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px 0;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.slider-content {
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.slider-content::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+.slide {
+    min-width: 100%;
+    font-size: 26px;
+    white-space: nowrap;
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+.slide strong {
+    font-weight: 700;
+}
+
+.arrow {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: white;
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* CATEGORY CAROUSEL WRAPPER */
+.category-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 4%;
+    margin: 20px 0;
+}
+
+/* SCROLLABLE SECTION */
+.category-section {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    padding: 20px 0;
+    width: 100%;
+}
+
+.category-section::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+/* CATEGORY ITEMS */
+.category-item {
+    flex-shrink: 0; /* Prevents items from squishing together */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+.category-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 12px;
+}
+
+.category-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* ARROW BUTTONS */
+.cat-arrow {
+    position: absolute;
+    left: 2%; /* Positions left arrow slightly over the edge */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: white;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-arrow.right {
+    left: auto;
+    right: 2%; /* Positions right arrow on the far right */
+}
+
+.cat-arrow:hover {
+    background: #f9f9f9;
+    color: #ed0074;
+}
+
+/* LIMITED TIME DEALS BASE */
+.deals-section {
+    padding: 35px 4%;
+}
+
+.deals-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.deals-heading h2 {
+    color: #df536c;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.deals-heading p {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/* DEALS CAROUSEL WRAPPER */
+.deals-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* DEALS SCROLL CONTAINER */
+.deals-container {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    padding: 10px 0;
+}
+
+.deals-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+/* DEAL CARDS */
+.deal-card {
+    width: calc(50% - 12.5px); /* Shows exactly 2 cards at a time on desktop */
+    flex-shrink: 0; /* Prevents cards from squishing */
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.deal-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.deal-card img:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* DEALS ARROW BUTTONS */
+.deal-arrow {
+    position: absolute;
+    left: -20px; /* Pulls left arrow slightly outside the wrapper */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: white;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deal-arrow.right {
+    left: auto;
+    right: -20px; /* Pulls right arrow slightly outside the wrapper */
+}
+
+.deal-arrow:hover {
+    background: #f9f9f9;
+    color: #df536c;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (TABLETS & MOBILE)
+   ========================================= */
+
+@media (max-width: 1100px) {
+    .main-nav {
+        gap: 15px;
+    }
+    .main-nav a {
+        font-size: 15px;
+    }
+    .search-box {
+        width: 220px;
+    }
+    .category-nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        justify-content: center;
+    }
+    .top-links {
+        display: none;
+    }
+    .main-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+    .main-nav {
+        display: none;
+    }
+    .search-box {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .category-nav {
+        height: 55px;
+    }
+    .hero {
+        height: auto;
+    }
+    
+    .offer-slider {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    .slide {
+        font-size: 18px;
+    }
+    
+    /* Hide all desktop arrow buttons on mobile (users will swipe) */
+    .arrow, 
+    .cat-arrow, 
+    .deal-arrow {
+        display: none; 
+    }
+
+    .category-section {
+        padding-bottom: 20px;
+    }
+    .category-item img {
+        width: 85px;
+        height: 85px;
+    }
+    .category-item p {
+        font-size: 15px;
+    }
+
+    .deals-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .deals-heading h2 {
+        font-size: 24px;
+    }
+    .deals-heading p {
+        font-size: 16px;
+    }
+    
+    .deal-card {
+        width: 85%; /* Shows 1 full card and a peek of the next one on mobile */
+    }
+}
+
+
+/* =========================================
+   DAZZLING FESTIVE PICKS
+   ========================================= */
+
+.festive-section {
+    padding: 40px 4%;
+    background-color: #fff;
+}
+
+.festive-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.festive-heading h2 {
+    color: #df536c;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* CAROUSEL WRAPPER */
+.festive-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* SCROLL CONTAINER */
+.festive-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    padding: 10px 0;
+}
+
+.festive-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+/* CARDS - Adjusted to original website size */
+.festive-card {
+    min-width: 246px; /* Matches the exact rendered width */
+    width: 246px;
+    flex-shrink: 0;
+    border-radius: 8px; /* Slightly sharper corners for smaller cards */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.festive-card img {
+    width: 100%;
+    aspect-ratio: 3 / 2; /* Forces the exact 246x164 ratio */
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.festive-card img:hover {
+    transform: scale(1.03); /* Subtle zoom on hover */
+}
+
+/* ARROW BUTTONS */
+.festive-arrow {
+    position: absolute;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    background: white;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.festive-arrow.right {
+    left: auto;
+    right: -20px;
+}
+
+.festive-arrow:hover {
+    background: #f9f9f9;
+    color: #df536c;
+}
+
+/* MOBILE RESPONSIVE OVERRIDES */
+@media (max-width: 768px) {
+    .festive-arrow {
+        display: none; /* Hide arrows for swipe */
+    }
+    .festive-card {
+        min-width: 85%; /* Shows 1 full card and a peek of the next */
+    }
+    .festive-heading h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   NEW & WORTH IT SECTION
+   ========================================= */
+
+.new-worth-it {
+    padding: 40px 4%;
+    background-color: #fff;
+}
+
+.nwi-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.nwi-heading h2 {
+    color: #f05c4b; /* Matches the orange/red tone of the header */
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* VIDEO BANNER */
+.nwi-video-banner {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nwi-video-banner video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* CAROUSEL WRAPPER */
+.nwi-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* SCROLL CONTAINER */
+.nwi-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+}
+
+.nwi-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARDS - Adjusted to exact 104x104px size */
+.nwi-card {
+    min-width: 104px; /* Forces exact width */
+    width: 104px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.nwi-card img {
+    width: 150px;
+    height: 150px; /* Forces exact height */
+   /* Keeps images perfectly square */
+    
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.nwi-card img:hover {
+    transform: scale(1.03);
+}
+
+.nwi-card p {
+    font-size: 13px; /* Slightly smaller font so it fits the narrow card better */
+    font-weight: 500;
+    color: #222;
+    margin-top: 10px;
+  
+}
+
+/* MOBILE RESPONSIVE OVERRIDES */
+@media (max-width: 768px) {
+    .nwi-arrow {
+        display: none;
+    }
+    .nwi-card {
+        min-width: 40%; /* Shows 2.5 cards on mobile so users know to scroll */
+    }
+    .nwi-heading h2 {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   BIG BRANDS, IRRESISTIBLE PRICES
+   ========================================= */
+
+.big-brands-section {
+    padding: 40px 4%;
+    background-color: #fff;
+}
+
+.brands-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    /* Optional: Add a subtle top/bottom border line if you want to match the reference exactly */
+    border-top: 1px dashed #eed5c2;
+    border-bottom: 1px dashed #eed5c2;
+    padding: 10px 0;
+}
+
+.brands-heading h2 {
+    color: #a43048; /* Matches the deep pink/maroon heading text */
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* GRID CONTAINER */
+.brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the leftover 4 cards on the bottom row */
+    gap: 15px; /* Spacing between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* INDIVIDUAL BRAND CARDS - Exact 129x200px Size */
+.brand-card {
+    width: 129px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-4px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+/* THIN BANNER SLOT */
+.banner-slot {
+    width: 100%;
+    margin: 20px 0; /* Adds spacing above and below */
+}
+
+.banner-slot img {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    height: 39px;
+    background-color: hsl(0, 0%, 90%);
+    cursor: pointer; /* Changed from zoom-in for better shopping UX */
+    transition: background-color 300ms ease;
+    
+    /* Prevents highlighting the image by mistake */
+    -webkit-user-select: none;
+    user-select: none; 
+}
+
+/* MOBILE RESPONSIVE OVERRIDES */
+@media (max-width: 768px) {
+    .brands-heading h2 {
+        font-size: 20px;
+    }
+    
+    .brands-grid {
+        gap: 10px;
+    }
+    
+    /* Slightly shrinks cards on mobile to fit 2-3 per row comfortably */
+    .brand-card {
+        width: 110px; 
+        height: 170px;
+    }
+}
